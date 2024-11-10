@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Garden Monitoring - Pengaturan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .setting-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .setting-card:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen bg-gray-100 p-4">
+        <!-- Sidebar -->
+        <nav class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg p-4">
+            <div class="flex items-center mb-8">
+                <i class="fas fa-leaf text-green-500 text-2xl mr-2"></i>
+                <h1 class="text-xl font-bold text-gray-800">Smart Garden</h1>
+            </div>
+            
+            <div class="space-y-4">
+                <a href="home.html" class="flex items-center space-x-2 p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="notifikasi.html" class="flex items-center space-x-2 p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                    <i class="fas fa-bell"></i>
+                    <span>Notifikasi</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 bg-green-100 text-green-600 rounded-lg">
+                    <i class="fas fa-cog"></i>
+                    <span>Pengaturan</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="ml-64 p-8">
+            <!-- Header -->
+            <div class="mb-8">
+                <h1 class="text-2xl font-bold text-gray-800">Pengaturan</h1>
+                <p class="text-gray-600">Konfigurasi sistem smart garden Anda</p>
+            </div>
+
+            <!-- Settings Sections -->
+            <div class="space-y-6">
+                <!-- Profil Pengguna -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4">Profil Pengguna</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap</label>
+                            <input type="text" class="w-full p-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500" value="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full p-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500" value="john.doe@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nomor Telepon</label>
+                            <input type="tel" class="w-full p-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500" value="+62123456789">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Zona Waktu</label>
+                            <select class="w-full p-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                                <option>WIB (UTC+7)</option>
+                                <option>WITA (UTC+8)</option>
+                                <option>WIT (UTC+9)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
+                        Simpan Perubahan
+                    </button>
+                </div>
+
+                <!-- Pengaturan Sistem -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4">Pengaturan Sistem</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-medium text-gray-800">Mode Otomatis</h3>
+                                <p class="text-sm text-gray-600">Aktifkan penyiraman otomatis berdasarkan jadwal</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
+                            </label>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-medium text-gray-800">Sensor Hujan</h3>
+                                <p class="text-sm text-gray-600">Hentikan penyiraman saat hujan terdeteksi</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
+                            </label>
+                        </div>
+
+                        <div>
+                            <h3 class="font-medium text-gray-800 mb-2">Ambang Batas Kelembaban</h3>
+                            <div class="flex items-center space-x-4">
+                                <input type="range" min="0" max="100" value="30" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                <span class="text-gray-600">30%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kalibrasi Sensor -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4">Kalibrasi Sensor</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-medium text-gray-800 mb-2">Sensor Kelembaban</h3>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+                                Mulai Kalibrasi
+                            </button>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-800 mb-2">Sensor Suhu</h3>
+                            <div class="flex items-center space-x-2">
+                                <input type="number" class="w-24 p-2 border border-gray-300 rounded-md" value="0">
+                                <span class="text-gray-600">°C (Offset)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pengaturan Keamanan -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4">Keamanan</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Password Lama</label>
+                            <input type="password" class="w-full p-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Password Baru</label>
+                            <input type="password" class="w-full p-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Konfirmasi Password Baru</label>
+                            <input type="password" class="w-full p-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
+                            Ubah Password
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Backup & Reset -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4">Backup & Reset</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+                                <i class="fas fa-download mr-2"></i>Unduh Backup Data
+                            </button>
+                        </div>
+                        <div>
+                            <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">
+                                <i class="fas fa-redo mr-2"></i>Reset ke Pengaturan Awal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tentang Sistem -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4">Tentang Sistem</h2>
+                    <div class="space-y-2">
+                        <p class="text-gray-600">Versi Sistem: 1.2.3</p>
+                        <p class="text-gray-600">Terakhir Diperbarui: 10 November 2024</p>
+                        <p class="text-gray-600">Status Sistem: Aktif</p>
+                        <a href="#" class="text-green-500 hover:text-green-600">Cek Pembaruan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
