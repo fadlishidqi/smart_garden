@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(notification);
         setTimeout(() => {
             notification.remove();
-            location.reload(); // Refresh halaman setelah notifikasi hilang
+            location.reload();
         }, 3000);
     };
 
